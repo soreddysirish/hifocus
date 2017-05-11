@@ -1,0 +1,39 @@
+<nav id="main-header" class="navbar navbar-default home-header">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+           <a class="navbar-brand Homelogo" href="/">
+            <!-- <img alt="Brand" src="/assets/logo.png" class="sticky-logo"> -->
+          </a>
+       
+          </div>
+         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+          <ul class="nav navbar-nav navbar-right">
+          <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
+            <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
+            <li><a href="#contact Us">Contact</a></li>
+            <li><a href="#">link1</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var locationForHome = window.location.href.split('/')
+      if(!locationForHome.includes("home")){
+          $('#main-header').addClass('scrolled-nav');
+          $('#main-header').css("background","#324c5f") 
+        }
+        if(locationForHome[4] ==""){
+           $('#main-header').removeClass('scrolled-nav');
+          $('#main-header').css({'background':'transparent',
+            'transition': '0.3s all ease-out'
+          }) 
+        }
+      })
+    </script>
