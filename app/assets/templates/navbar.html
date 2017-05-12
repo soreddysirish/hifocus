@@ -15,16 +15,16 @@
       <ul class="nav navbar-nav navbar-right">
         <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
         <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
-        <li><a href="#contact Us">Contact</a></li>
-         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">
-          <span class="glyphicon glyphicon glyphicon-user"></span> 
-          link 1
+        <li ng-class="{'active': curPage=='/contactus'}"><a href="#contact Us">Contact</a></li>
+         <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail') || (curPage== '/gateeligibility')}">
+          <a href="#gateExamdetail" name ="#gateExamdetail" class="dropdown-toggle dropdownLink" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false"  ng-click ='addactiveClass($event)'>
+          Gate{{curPage}}
           <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right"></span> Vission</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right"></span> Mission</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right"></span> Portfolio</a></li>
+            <li class=""><a href="#gateExamdetail"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink "></span>Gate exam details</a></li>
+            <li class=""><a href="#gateeligibility"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate Eligibility</a></li>
+            <li class=""><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Exam-How To Apply</a></li>
+             <li class=""><a href="#" class="dropdownLink"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate syllabus</a></li>
           </ul>
         </li>
       </ul>
@@ -44,10 +44,7 @@
         'transition': '0.3s all ease-out'
       }) 
     }
-
-
   if($(window).width() <= 768){
-   
       $('nav').removeAttr('id','main-header')
       $('nav').removeClass('scrolled-nav')
        $('.navbar').css('background','rgb(50, 76, 95)')
@@ -56,5 +53,8 @@
       $('nav').addClass('scrolled-nav')
       $('.navbar').css('background','transparent')
     }
+    $('.dropdownLink').on('click',function(){
+      $(this).closest('.activeDropDown').addClass('active')
+    })
 })
 </script>

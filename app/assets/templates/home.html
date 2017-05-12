@@ -297,18 +297,19 @@
                   data: data,
                   success: function(res){
                     if(res.status_code == 200){
+                      debugger;
                        $('#contactUs').css('opacity','')
                        $('.loader').hide()
                         $('.successMailer').show()
                       $('input[type="text"], textarea,input[type="email"]').val('');
                       $('.flash_message').animate({opacity:0},3000)
-                      setTimeout(function(){$('.successMailer').hide() }, 3500);
+                      setTimeout(function(){$('.successMailer').hide() }, 7000);
                     }else{
                        $('#contactUs').css('opacity','')
                        $('.loader').hide()
                         $('$.errorMailer').show()
                       $('.flash_message').animate({opacity:0},3000)
-                      setTimeout(function(){$('.successMailer').hide() }, 3500);
+                      setTimeout(function(){$('.successMailer').hide() }, 7000);
                     }
                   }
                 })

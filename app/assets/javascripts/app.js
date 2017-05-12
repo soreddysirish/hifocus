@@ -1,6 +1,13 @@
 var app = angular.module('hiFocus',['ngRoute','ngResource','ui.bootstrap'])
 app.controller("widgetsController",function($scope,$route,Map){
-	// debugger;
+	// $scope.addactiveClass = function($event){
+	// 	debugger;
+	// 	if($event.currentTarget.classList.contains('dropdown-toggle')){
+	// 		$($event.currentTarget).addClass('active')
+	// 	}else{
+	// 	$($event.currentTarget).closest('li.activeDropDown').addClass('active')
+	// 	}
+	// };
 })
 app.controller("mapShowCntrl",function($scope,$route,Map){
 	 // $scope.fetchdata = [{latitude : 38.431934, longitude : 141.309402}];//for multiple places
@@ -72,7 +79,17 @@ app.config(['$routeProvider', '$locationProvider',
 			templateUrl:'assets/aboutus.html',
 			controller: 'widgetsController',
 			activetab: "aboutus" 
-		}).otherwise({
+		})
+		.when('/gateExamdetail',{
+			templateUrl:'assets/gateExamdetail.html',
+			controller: 'widgetsController',
+			activetab: "gateExamdetail" 
+		}).when('/gateeligibility',{
+			templateUrl: 'assets/gateeligibility.html',
+			controller:'widgetsController',
+			activetab: 'gateExamdetail'
+		})
+		.otherwise({
 			redirectTo: '/',
 			controller: 'widgetsController'
 		})
