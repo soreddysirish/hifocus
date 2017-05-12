@@ -1,39 +1,60 @@
-<nav id="main-header" class="navbar navbar-default home-header">
-      <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-           <a class="navbar-brand Homelogo" href="/">
-            <!-- <img alt="Brand" src="/assets/logo.png" class="sticky-logo"> -->
-          </a>
-       
-          </div>
-         <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
-          <ul class="nav navbar-nav navbar-right">
-          <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
-            <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
-            <li><a href="#contact Us">Contact</a></li>
-            <li><a href="#">link1</a></li>
+<nav  id ="main-header" role= "navigation" class="navbar navbar-default navbar-fixed-top scrolled-nav">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand Homelogo" href="/">
+        <img alt="Brand" src="/assets/codingmartlogo.png" class="sticky-logo">
+      </a>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
+        <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
+        <li><a href="#contact Us">Contact</a></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false">
+          <span class="glyphicon glyphicon glyphicon-user"></span> 
+          link 1
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right"></span> Vission</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right"></span> Mission</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right"></span> Portfolio</a></li>
           </ul>
-        </div>
-      </div>
-    </nav>
-    <script type="text/javascript">
-    $(document).ready(function(){
-      var locationForHome = window.location.href.split('/')
-      if(!locationForHome.includes("home")){
-          $('#main-header').addClass('scrolled-nav');
-          $('#main-header').css("background","#324c5f") 
-        }
-        if(locationForHome[4] ==""){
-           $('#main-header').removeClass('scrolled-nav');
-          $('#main-header').css({'background':'transparent',
-            'transition': '0.3s all ease-out'
-          }) 
-        }
-      })
-    </script>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+  $(document).ready(function(){
+    var locationForHome = window.location.href.split('/')
+    if(!locationForHome.includes("home")){
+      $('#main-header').addClass('scrolled-nav');
+      $('#main-header').css("background","#324c5f") 
+    }
+    if(locationForHome[4] ==""){
+      $('#main-header').removeClass('scrolled-nav');
+      $('#main-header').css({'background':'transparent',
+        'transition': '0.3s all ease-out'
+      }) 
+    }
+
+
+  if($(window).width() <= 768){
+   
+      $('nav').removeAttr('id','main-header')
+      $('nav').removeClass('scrolled-nav')
+       $('.navbar').css('background','rgb(50, 76, 95)')
+    }else if(locationForHome[4] ==""){
+      $('nav').attr('id','main-header')
+      $('nav').addClass('scrolled-nav')
+      $('.navbar').css('background','transparent')
+    }
+})
+</script>

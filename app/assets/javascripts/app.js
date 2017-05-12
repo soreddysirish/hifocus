@@ -39,6 +39,14 @@ app.directive("navigateView",function(){
 		transclude: false
 	}
 })
+app.directive("footerView",function(){
+	return{
+		restrict: 'A',
+		templateUrl: 'assets/footer.html',
+		scope:true,
+		transclude: false
+	}
+})
 app.service("Map",function($q){
 	this.init =function(){
 		var mapOptions ={
