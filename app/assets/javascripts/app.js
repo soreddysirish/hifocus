@@ -1,13 +1,6 @@
 var app = angular.module('hiFocus',['ngRoute','ngResource','ui.bootstrap'])
 app.controller("widgetsController",function($scope,$route,Map){
-	// $scope.addactiveClass = function($event){
-	// 	debugger;
-	// 	if($event.currentTarget.classList.contains('dropdown-toggle')){
-	// 		$($event.currentTarget).addClass('active')
-	// 	}else{
-	// 	$($event.currentTarget).closest('li.activeDropDown').addClass('active')
-	// 	}
-	// };
+
 })
 app.controller("mapShowCntrl",function($scope,$route,Map){
 	 // $scope.fetchdata = [{latitude : 38.431934, longitude : 141.309402}];//for multiple places
@@ -94,6 +87,26 @@ app.config(['$routeProvider', '$locationProvider',
 			templateUrl: 'assets/gate_how_to_apply.html',
 			controller:'widgetsController',
 			activetab: 'gateExamdetail'
+		})
+		.when('/gate_paper_pattern',{
+			templateUrl: 'assets/gate_paper_pattern.html',
+			controller:'widgetsController',
+			activetab: 'gateExamdetail'
+		})
+		.when('/syllabus',{
+			templateUrl: 'assets/syllabus.html',
+			controller:'widgetsController',
+			activetab: 'gateExamdetail'
+		})
+		.when('/cources',{
+			templateUrl: 'assets/cources.html',
+			controller:'widgetsController',
+			activetab: 'cources'
+		})
+		.when('/psu',{
+			templateUrl: 'assets/psu.html',
+			controller:'widgetsController',
+			activetab: 'psu'
 		})
 		.otherwise({
 			redirectTo: '/',

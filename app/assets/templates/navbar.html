@@ -16,7 +16,7 @@
         <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
         <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
         <li ng-class="{'active': curPage=='/contactus'}"><a href="#contact Us">Contact</a></li>
-         <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail' || curPage== '/gateeligibility' || curPage=='/gate_how_to_apply')}">
+         <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail' || curPage== '/gateeligibility' || curPage=='/gate_how_to_apply' || curPage =='/gate_paper_pattern' || curPage=='/syllabus' )}">
           <a href="#gateExamdetail" name ="#gateExamdetail" class="dropdown-toggle dropdownLink" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false"  ng-click ='addactiveClass($event)'>
           Gate
           <span class="caret"></span></a>
@@ -24,9 +24,12 @@
             <li class=""><a href="#gateExamdetail"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink "></span>Gate exam details</a></li>
             <li class=""><a href="#gateeligibility"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate Eligibility</a></li>
             <li class=""><a href="#gate_how_to_apply"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Exam-How To Apply</a></li>
-             <li class=""><a href="#" class="dropdownLink"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate syllabus</a></li>
+            <li class=""><a href="#gate_paper_pattern"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Paper Pattern</a></li>
+             <li class=""><a href="#syllabus" class="dropdownLink"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate syllabus</a></li>
           </ul>
         </li>
+        <li ng-class="{'active': curPage=='/cources'}"><a href="#cources" name ="#cources">Cources</a></li>
+        <li ng-class="{'active': curPage=='/psu'}"><a href="#psu" name ="#psu">psu</a></li>
       </ul>
     </div>
   </div>
