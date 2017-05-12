@@ -47,6 +47,13 @@ app.directive("footerView",function(){
 		transclude: false
 	}
 })
+app.directive("contactUs",function(){
+	return {restrict: 'A',
+	templateUrl: 'assets/contactUsForm.html',
+	scope:true,
+	transclude:false
+}
+})
 app.service("Map",function($q){
 	this.init =function(){
 		var mapOptions ={
@@ -107,6 +114,10 @@ app.config(['$routeProvider', '$locationProvider',
 			templateUrl: 'assets/psu.html',
 			controller:'widgetsController',
 			activetab: 'psu'
+		}).when('/contactus',{
+			templateUrl: 'assets/contactus.html',
+			controller:'widgetsController',
+			activetab: 'contactus'
 		})
 		.otherwise({
 			redirectTo: '/',
