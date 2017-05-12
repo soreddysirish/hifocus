@@ -16,14 +16,14 @@
         <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
         <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
         <li ng-class="{'active': curPage=='/contactus'}"><a href="#contact Us">Contact</a></li>
-         <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail') || (curPage== '/gateeligibility')}">
+         <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail' || curPage== '/gateeligibility' || curPage=='/gate_how_to_apply')}">
           <a href="#gateExamdetail" name ="#gateExamdetail" class="dropdown-toggle dropdownLink" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false"  ng-click ='addactiveClass($event)'>
-          Gate{{curPage}}
+          Gate
           <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li class=""><a href="#gateExamdetail"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink "></span>Gate exam details</a></li>
             <li class=""><a href="#gateeligibility"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate Eligibility</a></li>
-            <li class=""><a href="#"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Exam-How To Apply</a></li>
+            <li class=""><a href="#gate_how_to_apply"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Exam-How To Apply</a></li>
              <li class=""><a href="#" class="dropdownLink"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate syllabus</a></li>
           </ul>
         </li>

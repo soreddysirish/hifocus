@@ -84,8 +84,14 @@ app.config(['$routeProvider', '$locationProvider',
 			templateUrl:'assets/gateExamdetail.html',
 			controller: 'widgetsController',
 			activetab: "gateExamdetail" 
-		}).when('/gateeligibility',{
+		})
+		.when('/gateeligibility',{
 			templateUrl: 'assets/gateeligibility.html',
+			controller:'widgetsController',
+			activetab: 'gateExamdetail'
+		})
+		.when('/gate_how_to_apply',{
+			templateUrl: 'assets/gate_how_to_apply.html',
 			controller:'widgetsController',
 			activetab: 'gateExamdetail'
 		})
