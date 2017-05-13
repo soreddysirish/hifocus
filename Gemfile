@@ -21,6 +21,7 @@ end
 # gem 'rails_12factor', group: :production
 # gem 'rails_serve_static_assets', group: [:production]
 # Use Puma as the app server
+# gem 'ruby','~>2.4.1'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
