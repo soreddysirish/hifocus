@@ -48,7 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: hifocusgate_production
+  # <<: *default
+  adapter: postgresql
+  database: db/production.sqlite
+  #database: hifocusgate_production
   username: hifocusgate
   password: <%= ENV['HIFOCUSGATE_DATABASE_PASSWORD'] %>
+
