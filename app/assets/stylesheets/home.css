@@ -2,28 +2,23 @@
   height: 258px;
   width: 535px
 }
-.navbar-default .navbar-nav > li.dropdown:hover > a, 
-.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
-.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
-    /*background-color: rgb(231, 231, 231);*/
-    /*color: rgb(85, 85, 85);*/
-}
+
 li.dropdown:hover > .dropdown-menu {
-    display: block;
-    height: auto;
+  display: block;
+  height: auto;
 }
 .loader {
   border: 4px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 4px solid #3498db;
-    width: 60px;
-    height: 60px;
-     -webkit-animation: spin 2s linear infinite; 
-     animation: spin 2s linear infinite; 
-    margin-left: 36%;
-    margin-top: -14%;
-    position: absolute;
-    z-index: 50;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite; 
+  margin-left: 36%;
+  margin-top: -14%;
+  position: absolute;
+  z-index: 50;
 }
 
 @-webkit-keyframes spin {
@@ -35,21 +30,6 @@ li.dropdown:hover > .dropdown-menu {
   100% { transform: rotate(360deg); }
 }
 
-@media only screen and (max-width: 768px){
-  .loader {
-    margin-top: -50%
-  }
-}
-@media only screen and (man-width: 600px) {
-  .loader {
-    margin-top: -50%
-  }
-}
-@media only screen and (man-width: 880px) {
-  .loader {
-    margin-top: -41%
-  }
-}
 .scrollup {
   width: 40px;
   height: 40px;
@@ -203,6 +183,18 @@ body {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
   background-color: transparent;
 }
+a.active{
+  color: #555;
+  color: #05f6e1!important;
+  height: auto!important;
+}
+
+#slide-header a:hover {
+  color: #FFAA00!important;
+  transition: 0.3s all ease-in;
+}
+
+
 .truncate-multiline{
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;
@@ -260,7 +252,7 @@ section[id] {
 .Homelogo img {
   max-width: 160px;
   position: relative;
-  left: 20px;
+  left: 0px;
 }
 .navbar {
   border-radius: 0;
@@ -301,6 +293,17 @@ section[id] {
   color: #fff;
   font-size: 25px;
 }
+.crossSlide i {
+  color: #fff;
+  font-size: 25px;
+}
+.crossSlide {
+  float: right;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
 /*--Home Slider--*/
 .banner-cnt {
   position: absolute;
@@ -373,7 +376,7 @@ section[id] {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: #fff;
+  background: rgba(17, 14, 225, 0.72);
   box-shadow: -3px 10px 7px rgba(0, 0, 0, 0.43);
   z-index: 9999;
 }
@@ -383,8 +386,9 @@ section[id] {
   margin: 0 0 5px;
   font-size: 15px!important;
   line-height: 30px;
-  color: #222;
+  color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 .homePageImages{
   width: 22%
@@ -441,7 +445,7 @@ section[id] {
   cursor: pointer;
 }
 .navbar-right  {
-  padding: 40px 0 0;
+  /*padding: 40px 0 0;*/
 }
 .sticky .navbar-right  {
   padding: 20px 0 0!important;
@@ -459,37 +463,37 @@ section[id] {
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    height: auto;
-    min-width: 233px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    list-style: none;
-    font-size: 18px;
-    background-color: #529092;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
-    /* background-clip: padding-box; */
-    /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
-    /* background-clip: padding-box; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  height: auto;
+  min-width: 233px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 18px;
+  background-color: #529092;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+  /* background-clip: padding-box; */
+  /* box-shadow: 0 6px 12px rgba(0,0,0,.175); */
+  /* background-clip: padding-box; */
 }
 
 .dropdown-menu>li>a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: bold;
-    line-height: 2.428571;
-    color: #333;
-    white-space: nowrap;
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: bold;
+  line-height: 2.428571;
+  color: #333;
+  white-space: nowrap;
 }
 .dropdown-menu>li>a:hover{
   background-color: transparent;
