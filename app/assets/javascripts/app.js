@@ -1,15 +1,7 @@
 var app = angular.module('hiFocus',['ngRoute','ngResource','ui.bootstrap'])
-// app.controller("widgetsController",['$scope','$route','Map', function($scope,$route,Map){
+app.controller("widgetsController",['$scope','$route','Map', function($scope,$route,Map){
 
-// }]);
-angular
-    .module('app')
-    .controller('widgetsController', widgetsController);
-
-widgetsController.$inject = ['$scope','$route','Map'];
-
-function DashboardController('$scope','$route','Map') {
-}
+}]);
 // app.controller("mapShowCntrl",function($scope,$route,Map){
 // 	 // $scope.fetchdata = [{latitude : 38.431934, longitude : 141.309402}];//for multiple places
 
