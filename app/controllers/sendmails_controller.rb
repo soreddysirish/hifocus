@@ -2,11 +2,11 @@
 class SendmailsController < ApplicationController
 	def mailing
 		res = ContactMailer.send_mail(params).deliver
-		binding.pry
-		easy = SMSEasy::Client.new
+		# binding.pry
+		# easy = SMSEasy::Client.new
 
-# Deliver a simple message.
-easy.deliver("9949999818", "verizon", "Hey!")  
+# # Deliver a simple message.
+# easy.deliver("9949999818", "verizon", "Hey!")  
 		# begin
 		# 	account_sid = "AC84db1ea0d36a5f3db797ed90e3a02b45"
 		# 	auth_token = "87b9a13cb1ef7bacfbb41396e9c161a1"
