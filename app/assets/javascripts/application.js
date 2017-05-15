@@ -24,17 +24,17 @@ $(document).ready(function(){
   $(window).scroll(function(){
     scrollTop = $(window).scrollTop();
     $('.counter').html(scrollTop);
-    var locationForHome = window.location.href.split('/')
-    if (scrollTop >= 100) {
-      $('#main-header').addClass('scrolled-nav');
-      $('#main-header').css("background","#324c5f") 
-    } else if (scrollTop < 100 && 
-      (locationForHome.includes("home") || locationForHome[4] =="" )) { 
-      $('#main-header').removeClass('scrolled-nav');
-      $('#main-header').css({'background':'transparent',
-        'transition': '0.3s all ease-out'
-      }) 
-    }
+    // var locationForHome = window.location.href.split('/')
+    // if (scrollTop >= 100) {
+    //   $('#main-header').addClass('scrolled-nav');
+    //   $('#main-header').css("background","#324c5f") 
+    // } else if (scrollTop < 100 && 
+    //   (locationForHome.includes("home") || locationForHome[4] =="" )) { 
+    //   $('#main-header').removeClass('scrolled-nav');
+    //   $('#main-header').css({'background':'transparent',
+    //     'transition': '0.3s all ease-out'
+    //   }) 
+    // }
     $(".animatedSlide").each(function(){
       var pos = $(this).offset().top;
       var winTop = $(window).scrollTop();
