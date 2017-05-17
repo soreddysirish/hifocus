@@ -1,0 +1,174 @@
+<div class="container animatedSlide contactUsformsethight">
+  <h2 style="text-align: center;" class="animatedSlide" id="contactUsform"> contact us</h2>
+  <div class="alert alert-success alert-dismissable successMailer flash_message"  style="display: none;">
+    <strong>Thank you! we received your mail we will contact you soon</strong> 
+  </div>
+  <div class="alert alert-danger alert-dismissable errorMailer flash_message" style="display: none;">
+    <strong>somthing went wrong please try again</strong> 
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="">
+        <form name="contactUs" method ="get"  id ="contactUs">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name"  name="name" data-validation="required" data-validation-error-msg="Please enter  name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                </span>
+                <input type="email" class="form-control" id="email" name = "email" placeholder="Enter email" data-validation="required email" data-validation-error-msg="Please enter your email" /></div>
+              </div>
+              <div class="form-group">
+                <label for="Mobile">
+                  Mobile Number</label>
+                  <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-earphone"></span>
+                  </span>
+                  <input type="text" class="form-control" id="mobileNumber" name= "mobileNumber" placeholder="Enter Mobile number" data-validation=" required number" data-validation-error-msg="Please enter mobile number" /></div>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">
+                    Message</label>
+                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" 
+                    placeholder="Message" name "message" data-validation="required length" data-validation-length="max25" data-validation-error-msg="we allow only 25 characters only"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-push-5">
+                <button type="button" class="btn btn-info pull-left" id="btnContactUs">
+                  Contact me</button>
+                  <button type="button" class="btn btn-default pull-left btnClr" id="resetForm" style="margin-left: 2%">
+                    Reset</button>
+                  </div>
+                </form>
+                <div class="loader" style="display: none;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="horizontal animatedSlide"/>
+        <div class="container animatedSlide contactInfo">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <!-- <div ng-controller ="mapShowCntrl"> -->
+                  <!-- <div id ="map"> -->
+                  <a target="_blank" href="https://www.google.co.in/maps/place/Hi+focus+academy/@11.021064,76.971669,206m/data=!3m1!1e3!4m5!3m4!1s0x3ba96f375604c2ff:0xa231bec03f8331ec!8m2!3d11.021064!4d76.971669?hl=en" class ="mapTarget">
+                    <img src="http://maps.google.com/maps/api/staticmap?center=11.021064,76.971669&amp;markers=color:green%7Clabel:hifocus%7C11211%7C11206%7C11222|11.021064,76.971669&amp;zoom=16&amp;size=500x400&amp;sensor=false&amp;scaleControl=true&amp;zoomControl=true" class="staticMapClass">
+                  </a>
+                </div>
+                <div class="col-md-6">
+                <h3 style="font-weight: bold;">Office address</h3>
+                  <ul class="list-unstyled">
+                    <li>205, Chinnasamy Road,<br />
+                      Near 100ft Signal, <br/>
+                      New Siddhapudur, Gandhipuram,<br />
+                      Coimbatore- 44.<br />
+                      <b>Ph</b> : +91 73390 32444, 73390 34440<br />
+                      <b>Email</b> : hifocusgateacademy@gmail.com
+                    </li>
+                    <h3 style="font-weight: bold;"> Branch </h3>
+                    <li>3rd Floor, Sri Vaishnavi Complex,<br />
+                      Annamalai Layout, Nalli Hospital Backside, <br/>
+                      Near Vignesh Hotel, Royal Theatre Opp Road,,<br />
+                      Near Busstand, Erode - 638011<br />
+                      <b>Ph</b> :+91 73390 32444<br />
+                      <b>Email</b> info@hifocusgateacademy.com
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <style type="text/css">
+          @media only screen and (max-width: 768px){
+            .loader {
+              margin-top: -50%
+            }
+          }
+          @media only screen and (man-width: 600px) {
+            .loader {
+              margin-top: -50%
+            }
+          }
+          @media only screen and (man-width: 880px) {
+            .loader {
+              margin-top: -41%
+            }
+          }
+        </style>
+        <script type="text/javascript">
+          $.validate()
+          if(window.location.href.split('/').includes("contactus")){
+            $('.contactUsformsethight').css('margin-top', '7%')
+          }else{
+             $('.contactUsformsethight').css('margin-top', '2%')
+          }
+          $('#mobileNumber').on('keypress',function(e) {
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode == 8) return true;
+            var keynum;
+            var keychar;
+            var numcheck = /[+0-9]/;
+            if (window.event) 
+            {
+              keynum = e.keyCode;
+            }
+            else {
+              if (e.which) 
+              {
+                keynum = e.which;
+              }
+              else return true;
+            }
+            keychar = String.fromCharCode(keynum);
+            return numcheck.test(keychar); 
+          });
+          $('#btnContactUs').on('click',function(){
+            data ={}
+            data.name = $('#name').val()
+            data.email = $('#email').val()
+            data.mobileNumber = $('#mobileNumber').val()
+            data.message = $('#message').val()
+            var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i)
+            if($('#name').val()!= "" && $('#email').val()!= "" && $('#mobileNumber').val()!="" && $('#message').val() !="" && pattern.test(data.email)){
+             $('#contactUs').css('opacity','0.1')
+             $('.loader').show()
+             $.ajax({
+              url: '/sendmails/mailing',
+              method: 'get',
+              data: data,
+              success: function(res){
+                if(res.status_code == 200){
+                  debugger;
+                  $('#contactUs').css('opacity','')
+                  $('.loader').hide()
+                  $('.successMailer').show()
+                  $('input[type="text"], textarea,input[type="email"]').val('');
+                  $('.flash_message').animate({opacity:0},3000)
+                  setTimeout(function(){$('.successMailer').hide() }, 7000);
+                }else{
+                 $('#contactUs').css('opacity','')
+                 $('.loader').hide()
+                 $('$.errorMailer').show()
+                 $('.flash_message').animate({opacity:0},3000)
+                 setTimeout(function(){$('.successMailer').hide() }, 7000);
+               }
+             }
+           })
+           }
+         })
+
+       </script>

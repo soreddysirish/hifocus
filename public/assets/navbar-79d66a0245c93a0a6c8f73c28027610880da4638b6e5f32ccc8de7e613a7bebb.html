@@ -1,0 +1,88 @@
+<nav id="main-header" class="navbar navbar-default home-header">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand Homelogo" href="/">
+      <img alt="Brand" src="/assets/logo.png" class="sticky-logo">
+      </a>
+      <button class="Mslide visible-xs">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="navbar-toggle collapsed hidden-xs" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right" style="padding-top: 3%;">
+        <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
+        <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail' || curPage== '/gateeligibility' || curPage=='/gate_how_to_apply' || curPage =='/gate_paper_pattern' || curPage=='/syllabus' )}">
+          <a href="#gateExamdetail" name ="#gateExamdetail" class="dropdown-toggle dropdownLink" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false"  ng-click ='addactiveClass($event)'>
+            Gate
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class=""><a href="#gateExamdetail"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink "></span>Gate exam details</a></li>
+              <li class=""><a href="#gateeligibility"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate Eligibility</a></li>
+              <li class=""><a href="#gate_how_to_apply"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Exam-How To Apply</a></li>
+              <li class=""><a href="#gate_paper_pattern"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Paper Pattern</a></li>
+              <li class=""><a href="#syllabus" class="dropdownLink"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate syllabus</a></li>
+            </ul>
+          </li>
+          <li ng-class="{'active': curPage=='/cources'}"><a href="#cources" name ="#cources">Cources</a></li>
+          <li ng-class="{'active': curPage=='/psu'}"><a href="#psu" name ="#psu">psu</a></li>
+          <li ng-class="{'active': curPage=='/enrollment'}"><a href="#enrollment" name ="#enrollment">Enrollment</a></li>
+          <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
+          <li ng-class="{'active': curPage=='/contactus'}"><a href="#contactus">Contact us</a></li>
+        </ul>
+      </div>
+      
+      <div id="slide-header" style="right: -300px;">
+       <button class="crossSlide visible-xs">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+        <ul class="list-unstyled navslider" style="margin-top: -4%;">
+         <li ng-class="{'active': curPage=='/'}"><a href="#home" name ="#home">Home</a></li>
+         <li class="dropdown" ng-class ="{'active': (curPage=='/gateExamdetail' || curPage== '/gateeligibility' || curPage=='/gate_how_to_apply' || curPage =='/gate_paper_pattern' || curPage=='/syllabus' )}">
+          <a href="#gateExamdetail" name ="#gateExamdetail" class="dropdown-toggle dropdownLink" data-toggle="dropdown" data-hover="dropdown"  data-close-others="false"  ng-click ='addactiveClass($event)'>
+            Gate
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class=""><a href="#gateExamdetail"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink "></span>Gate exam details</a></li>
+              <li class=""><a href="#gateeligibility"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate Eligibility</a></li>
+              <li class=""><a href="#gate_how_to_apply"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Exam-How To Apply</a></li>
+              <li class=""><a href="#gate_paper_pattern"><span class="glyphicon glyphicon glyphicon-chevron-right dropdownLink"></span>Gate Paper Pattern</a></li>
+              <li class=""><a href="#syllabus" class="dropdownLink"><span class="glyphicon glyphicon glyphicon-chevron-right"></span>Gate syllabus</a></li>
+            </ul>
+          </li>
+          <li ng-class="{'active': curPage=='/cources'}"><a href="#cources" name ="#cources">Cources</a></li>
+          <li ng-class="{'active': curPage=='/psu'}"><a href="#psu" name ="#psu">psu</a></li>
+          <li ng-class="{'active': curPage=='/aboutus'}"><a href="#aboutus" name = "aboutus">About Us</a></li>
+          <li ng-class="{'active': curPage=='/contactus'}"><a href="#contactus">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.Mslide').click(function(){
+        $('#slide-header').css({'right':'0'});
+      })
+      if($(window).width() <= 768){
+        // $('nav').removeAttr('id','main-header')
+        // $('nav').removeClass('scrolled-nav')
+        // $('.Mslide').css('margin-top','-27%')
+        // $('.Homelogo img').css('max-width','40%')
+        // $('#main-header').css('height','60px!important')
+        //$('.navbar').css('background','rgb(32, 166, 217)')
+      }//else if(locationForHome[4] ==""){
+    //     $('nav').attr('id','main-header')
+    //     $('nav').addClass('scrolled-nav')
+    //     $('.navbar').css('background','transparent')
+    //   }
+      $('.crossSlide').on('click',function () {
+         $('#slide-header').css('right','-300px')
+      });
+    })
+  </script>
