@@ -467,6 +467,7 @@ section[id] {
   text-align: center;
   text-transform: capitalize;
   line-height: 227%;
+  color:rgba(23, 19, 232, 0.91);
 }
 #HomeSlider:before {
   content: '';

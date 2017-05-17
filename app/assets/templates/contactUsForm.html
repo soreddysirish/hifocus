@@ -1,4 +1,4 @@
-<div class="container animatedSlide" style="margin-top: 8%";>
+<div class="container animatedSlide contactUsformsethight">
   <h2 style="text-align: center;" class="animatedSlide" id="contactUsform"> contact us</h2>
   <div class="alert alert-success alert-dismissable successMailer flash_message"  style="display: none;">
     <strong>Thank you! we received your mail we will contact you soon</strong> 
@@ -42,7 +42,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-md-push-5" style="margin-top: 6%;">
+              <div class="col-md-6 col-md-push-5">
                 <button type="button" class="btn btn-info pull-left" id="btnContactUs">
                   Contact me</button>
                   <button type="button" class="btn btn-default pull-left btnClr" id="resetForm" style="margin-left: 2%">
@@ -111,6 +111,11 @@
         </style>
         <script type="text/javascript">
           $.validate()
+          if(window.location.href.split('/').includes("contactus")){
+            $('.contactUsformsethight').css('margin-top', '7%')
+          }else{
+             $('.contactUsformsethight').css('margin-top', '2%')
+          }
           $('#mobileNumber').on('keypress',function(e) {
             var charCode = (e.which) ? e.which : e.keyCode;
             if (charCode == 8) return true;
@@ -132,7 +137,6 @@
             return numcheck.test(keychar); 
           });
           $('#btnContactUs').on('click',function(){
-            debugger;
             data ={}
             data.name = $('#name').val()
             data.email = $('#email').val()

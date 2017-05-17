@@ -118,6 +118,10 @@ app.config(['$routeProvider', '$locationProvider',
 			templateUrl: 'assets/contactus.html',
 			controller:'widgetsController',
 			activetab: 'contactus'
+		}).when('/enrollment',{
+			templateUrl: 'assets/enrollment.html',
+			controller:'widgetsController',
+			activetab: 'enrollment'
 		})
 		.otherwise({
 			redirectTo: '/',
