@@ -5,8 +5,8 @@ class SendmailsController < ApplicationController
 		# binding.pry
 		# easy = SMSEasy::Client.new
 
-# # Deliver a simple message.
-# easy.deliver("9949999818", "verizon", "Hey!")  
+		# # Deliver a simple message.
+		# easy.deliver("9949999818", "verizon", "Hey!")  
 		# begin
 		# 	account_sid = "AC84db1ea0d36a5f3db797ed90e3a02b45"
 		# 	auth_token = "87b9a13cb1ef7bacfbb41396e9c161a1"
@@ -22,5 +22,8 @@ class SendmailsController < ApplicationController
 		else
 			render json: { status: :fail}
 		end
+	end
+	def enrollment 
+		binding.pry
 	end
 end

@@ -1,6 +1,9 @@
-var app = angular.module('hiFocus',['ngRoute','ngResource','ui.bootstrap'])
+var app = angular.module('hiFocus',['ngRoute','ngResource','ui.bootstrap','validation','validation.rule'])
 app.controller("widgetsController",['$scope','$route','Map', function($scope,$route,Map){
+	$scope.submitContactUsForm = function(){
+		debugger;
 
+	}
 }]);
 // app.controller("mapShowCntrl",function($scope,$route,Map){
 // 	 // $scope.fetchdata = [{latitude : 38.431934, longitude : 141.309402}];//for multiple places
