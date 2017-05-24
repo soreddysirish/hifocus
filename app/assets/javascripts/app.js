@@ -1,8 +1,84 @@
-var app = angular.module('hiFocus',['ngRoute','ngResource','ui.bootstrap','validation','validation.rule'])
-app.controller("widgetsController",['$scope','$route','Map', function($scope,$route,Map){
+var app = angular.module('hiFocus',['validation','validation.rule','720kb.datepicker','ngRoute','ngResource','ui.bootstrap']).
+config(['$validationProvider',function($validationProvider){
+	$validationProvider.setDefaultMsg({
+		minlength: {
+			error: "Please enter 10 digit mobile number"
+		},
+		maxlength: {
+			error: "Mobile number contains only 10 numbers"
+		}
+	})
+}])
+app.controller("widgetsController",['$scope','$route','Map','$http', function($scope,$route,Map,$http){
+	$scope.designation = ["B.E / B.Tech Completed","B.E / B.Tech 4th Year","B.E / B.Tech 3rd Year","Doing M.Tech","Currently working"]
 	$scope.submitContactUsForm = function(){
-		debugger;
-
+		$('#contactUs').css('opacity','0.1');
+		$('.loader').show();
+		data = {
+			name:$scope.contactUs.name,
+			email:$scope.contactUs.emailId,
+			mobileNumber:$scope.contactUs.mobileNumber,
+			message: $scope.contactUs.reason
+		}
+		$http({
+			method:'GET',
+			url:'/sendmails/mailing',
+			params: data
+		}).then(function(res){
+			if(res.data.status_code == 200){
+				$('#contactUs').css('opacity','')
+				$('.loader').hide()
+				$('.successMailer').show()
+				// $('input[type="text"], textarea,input[type="email"]').val('');
+				$('form').get(0).reset()
+				$('.flash_message').animate({opacity:0},3000)
+				setTimeout(function(){$('.successMailer').hide() }, 7000);
+			}else{
+				$('#contactUs').css('opacity','')
+				$('.loader').hide()
+				$('.errorMailer').show()
+				$('.flash_message').animate({opacity:0},3000)
+				setTimeout(function(){$('.errorMailer').hide() }, 7000);
+			}
+		})
+	}
+	$scope.submitEnrollment =function(){
+		$('#enrollment').css('opacity','0.1');
+			$('.loader').show();
+		data ={
+			name: $scope.enrollment.Name,
+			gender :$scope.enrollment.gender,
+			dateOfBirth:$scope.enrollment.dateOfBirth,
+			selectedDesignation: $scope.enrollment.selectedDesignation,
+			userMobile:$scope.enrollment.mobileNumber,
+			email:$scope.enrollment.emailId,
+			fatherName:$scope.enrollment.fatherName,
+			faherNumber:$scope.enrollment.faherNumber,
+			studentAddress:$scope.enrollment.studentAddress,
+			previousGaterank:$scope.enrollment.previousGaterank,
+			previousIESrank:$scope.enrollment.previousIESrank,
+			collegeAddress:$scope.enrollment.collegeAddress
+		}
+		$http({
+			method: 'GET',
+			url:'sendmails/enrollment',
+			params:data
+		}).then(function(res){
+			if(res.data.status_code == "200"){
+				$('.loader').hide();
+				$('#enrollment').css('opacity','');
+				$('form').get(0).reset()
+				$('.successMailer').show()
+				$('.flash_message').animate({opacity:0},3000)
+				setTimeout(function(){$('.successMailer').hide() }, 7000);
+			}else{
+				$('.loader').hide();
+				$('#enrollment').css('opacity','');
+				$('.errorMailer').show()
+				$('.flash_message').animate({opacity:0},3000)
+				setTimeout(function(){$('.errorMailer').hide() }, 7000);
+			}
+		})
 	}
 }]);
 // app.controller("mapShowCntrl",function($scope,$route,Map){

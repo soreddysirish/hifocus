@@ -422,7 +422,7 @@ section[id] {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: rgba(17, 14, 225, 0.72);
+  background: rgba(15, 215, 178, 0.98);
   box-shadow: -3px 10px 7px rgba(0, 0, 0, 0.43);
   z-index: 9999;
 }
@@ -546,12 +546,18 @@ section[id] {
   background-color: transparent;
 }
 @media screen and (max-width: 820px) and (min-width: 600px) {
+ .dropdown-menu{
+  background-color: rgba(45, 155, 207, 0.91)
+ }
 
   .dropdown-menu>li>a:hover{
     height: auto!important;
   }
 }
 @media screen and (min-width: 322px) and (max-width: 400px) {
+  .dropdown-menu{
+  background-color: rgba(45, 155, 207, 0.91)
+ }
 .Homelogo img{
   max-width :40%!important;
 }
@@ -563,6 +569,9 @@ section[id] {
 }
 }
 @media screen and (max-width: 600px){
+  .dropdown-menu{
+  background-color: rgba(45, 155, 207, 0.91)
+ }
   .Homelogo img{
   max-width :40%!important;
 }
