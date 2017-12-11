@@ -12,7 +12,7 @@ module Hifocusgate
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.assets.paths << "#{Rails.root}/app/assets/templates"
+     config.assets.paths << "#{Rails.root}/app/assets/templates"
      config.assets.paths << "#{Rails.root}/app/assets/fonts"
      config.assets.paths << Rails.root.join("app", "assets", "images")
     # config.serve_static_files = true

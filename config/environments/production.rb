@@ -86,8 +86,8 @@ config.action_mailer.smtp_settings = {
     port: 587,
     authentication: 'plain',
     enable_starttls_auto: true,
-    user_name: "sireesh@codingmart.com",
-    password: "anusiri$201",
+    # user_name: "sireesh@codingmart.com",
+    # password: "anusiri$201",
     return_response: true
 }
   # Use a different logger for distributed setups.
