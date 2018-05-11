@@ -35,13 +35,13 @@ $(document).ready(function(){
     //     'transition': '0.3s all ease-out'
     //   }) 
     // }
-    $(".animatedSlide").each(function(){
-      var pos = $(this).offset().top;
-      var winTop = $(window).scrollTop();
-      if (pos < winTop + 600) {
-        $(this).addClass("animatedSlideeach");
-      }
-    });
+    // $(".animatedSlide").each(function(){
+    //   var pos = $(this).offset().top;
+    //   var winTop = $(window).scrollTop();
+    //   if (pos < winTop + 600) {
+    //     $(this).addClass("animatedSlideeach");
+    //   }
+    // });
     if($(this).scrollTop() > 350){
       $('.scrollup').fadeIn();
     }
