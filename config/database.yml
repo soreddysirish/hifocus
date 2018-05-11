@@ -13,13 +13,13 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: qwnjpbgfiiupnp
-  password: 195270f1db60083d5930b984f6645fe394a36cb8e39aba184ba6c5444b07595d
-  host: ec2-23-23-248-192.compute-1.amazonaws.com
-  database: d22lp3udl31be1
+  username: dfmrgwguhsipep
+  password: 3701defe3c93ccda9c2e80c1ca2c3f7c0b5103da9f3c6a3f6d15597e6fc0baba
+  host: ec2-50-16-196-238.compute-1.amazonaws.com
+  database: d60bvihabuhtu6
   port: 5432
-  URI: postgres://qwnjpbgfiiupnp:195270f1db60083d5930b984f6645fe394a36cb8e39aba184ba6c5444b07595d@ec2-23-23-248-192.compute-1.amazonaws.com:5432/d22lp3udl31be1
-  Heroku CLI: heroku pg:psql postgresql-animate-52820 --app bspreddyjanasanga
+  URI: postgres://dfmrgwguhsipep:3701defe3c93ccda9c2e80c1ca2c3f7c0b5103da9f3c6a3f6d15597e6fc0baba@ec2-50-16-196-238.compute-1.amazonaws.com:5432/d60bvihabuhtu6
+  Heroku CLI: heroku pg:psql postgresql-rectangular-11682 --app bspreddyjanasanga
 
 
 
