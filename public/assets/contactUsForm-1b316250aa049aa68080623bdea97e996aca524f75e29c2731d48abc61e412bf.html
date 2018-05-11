@@ -1,0 +1,143 @@
+<!-- <div class="container animatedSlide contactUsformsethight">
+  <h2 style="text-align: center;" class="animatedSlide" id="contactUsform"> contact us</h2>
+  <div class="alert alert-success alert-dismissable successMailer flash_message"  style="display: none;">
+    <strong>Thank you! we received your mail we will contact you soon</strong> 
+  </div>
+  <div class="alert alert-danger alert-dismissable errorMailer flash_message" style="display: none;">
+    <strong>somthing went wrong please try again</strong> 
+  </div>
+  <div class="row" ng-controller = "widgetsController">
+    <div class="col-md-12">
+      <form name="contactUs" id ="contactUs">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" name="Name" class="form-control" ng-model="contactUs.name" validator="required"  valid-method="blur" required-error-message='Please enter your name'>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <div class="form-group">
+               <input type ="text" name = "email" class="form-control"  validator ="required,email" ng-model ="contactUs.emailId" valid-method ="blur" required-error-message='Please enter your email id'>
+             </div>
+           </div>
+           <div class="form-group">
+            <label for="Mobile">
+              Mobile Number</label>
+              <div class="form-group">
+                <input type="text" name="phoneNumber" class="form-control" ng-model ="contactUs.mobileNumber" validator ="required,number,minlength=10,maxlength=10" valid-method ="blur" required-error-message="Please enter mobileNumber" id ="mobileNumber"></div>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">
+                  Message</label>
+                  <textarea name="message"  class="form-control" rows="9" cols="25" 
+                  placeholder="Message" name ="message" validator="required"  valid-method="blur" ng-model ="contactUs.reason" required-error-message='Please enter some description'></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-push-5">
+              <button validation-submit="contactUs" ng-click ="submitContactUsForm()" ng-disabled="!contactUs.$valid" class="btn btn-info pull-left" >Submit</button>
+              <button validation-reset="form" class="btn btn-default pull-left btnClr" id="resetForm" style="margin-left: 2%">Reset</button>
+            </div>
+          </form>
+          <div class="loader" style="display: none;"></div>
+        </div>
+      </div>
+    </div> -->
+    <hr class="horizontal animatedSlide"/>
+    <div class="container animatedSlide contactInfo" style="
+    background: rgba(102, 218, 222, 0.75);
+">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-6">
+              <!-- <div ng-controller ="mapShowCntrl"> -->
+              <!-- <div id ="map"> -->
+
+              <a target="_blank" href="https://www.google.co.in/maps/place/Lord+Shiva+Temple/@13.7893017,77.4891804,248m/data=!3m1!1e3!4m12!1m6!3m5!1s0x3ba96f375604c2ff:0xa231bec03f8331ec!2sHi+focus+academy!8m2!3d11.021064!4d76.971669!3m4!1s0x3bb1a3489ef88bc3:0x49fa8afe6adf46bc!8m2!3d13.789415!4d77.4890506?hl=en" class ="mapTarget">
+                <img src="http://maps.google.com/maps/api/staticmap?center=13.789011,77.490001&amp;markers=color:green%7Clabel:Bsp%7C11211%7C11206%7C11222|13.789011,77.490001&amp;zoom=16&amp;size=500x400&amp;sensor=false&amp;scaleControl=true&amp;zoomControl=true" class="staticMapClass">
+
+              </a>
+            </div>
+            <div class="col-md-6">
+              <h3 style="font-weight: bold;">Location</h3>
+              <ul class="list-unstyled">
+                <li>K.Basavana palli<br />
+                  Hindupur(M), <br/>
+                  Ananthapur (D)<br />
+                  <b>Ph</b> : +91 123456<br />
+                  <b>Email</b> : test@gmail.com
+                </li>
+                <!-- <h3 style="font-weight: bold;"> Branch </h3>
+                <li>3rd Floor, Sri Vaishnavi Complex,<br />
+                  Annamalai Layout, Nalli Hospital Backside, <br/>
+                  Near Vignesh Hotel, Royal Theatre Opp Road,,<br />
+                  Near Busstand, Erode - 638011<br />
+                  <b>Ph</b> :+91 73390 32444<br />
+                  <b>Email</b> info@hifocusgateacademy.com
+                </li> -->
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style type="text/css">
+      .validation-invalid{
+        color: red;
+      }
+      p.validation-valid{
+        display: none;
+      }
+      p{
+        margin: 0 0 10px;
+      }
+      @media only screen and (max-width: 768px){
+        .loader {
+          margin-top: -50%
+        }
+      }
+      @media only screen and (man-width: 600px) {
+        .loader {
+          margin-top: -50%
+        }
+      }
+      @media only screen and (man-width: 880px) {
+        .loader {
+          margin-top: -41%
+        }
+      }
+    </style>
+    <script type="text/javascript">
+          if(window.location.href.split('/').includes("contactus")){
+            $('.contactUsformsethight').css('margin-top', '7%')
+          }else{
+           $('.contactUsformsethight').css('margin-top', '2%')
+         }
+          $('#mobileNumber').on('keypress',function(e) {
+            var charCode = (e.which) ? e.which : e.keyCode;
+            if (charCode == 8) return true;
+            var keynum;
+            var keychar;
+            var numcheck = /[+0-9]/;
+            if (window.event) 
+            {
+              keynum = e.keyCode;
+            }
+            else {
+              if (e.which) 
+              {
+                keynum = e.which;
+              }
+              else return true;
+            }
+            keychar = String.fromCharCode(keynum);
+            return numcheck.test(keychar); 
+          });
+       </script>
