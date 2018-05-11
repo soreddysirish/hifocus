@@ -13,14 +13,19 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: myapp
-  password: password1
-  host: localhost
+  username: qwnjpbgfiiupnp
+  password: 195270f1db60083d5930b984f6645fe394a36cb8e39aba184ba6c5444b07595d
+  host: ec2-23-23-248-192.compute-1.amazonaws.com
+  database: d22lp3udl31be1
+  port: 5432
+  URI: postgres://qwnjpbgfiiupnp:195270f1db60083d5930b984f6645fe394a36cb8e39aba184ba6c5444b07595d@ec2-23-23-248-192.compute-1.amazonaws.com:5432/d22lp3udl31be1
+  Heroku CLI: heroku pg:psql postgresql-animate-52820 --app bspreddyjanasanga
+
+
 
 development:
   <<: *default
-  database: hifocusgate_development
-
+  # database: hifocusgate_development
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
