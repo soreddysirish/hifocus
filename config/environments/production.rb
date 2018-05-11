@@ -78,7 +78,7 @@ end
   config.log_formatter = ::Logger::Formatter.new
   # config.assets.js_compressor = Uglifier.new(mangle: false)
 config.action_mailer.perform_deliveries = true
-config.action_mailer.default_url_options = { host:"hifocusgate.herokuapp.com" }
+config.action_mailer.default_url_options = { host:"bspreddyjanasanga.herokuapp.com" }
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
    address: "smtp.gmail.com",
@@ -86,8 +86,8 @@ config.action_mailer.smtp_settings = {
     port: 587,
     authentication: 'plain',
     enable_starttls_auto: true,
-    # user_name: "sireesh@codingmart.com",
-    # password: "anusiri$201",
+    user_name: "sireesh@codingmart.com",
+    password: "anusiri$201",
     return_response: true
 }
   # Use a different logger for distributed setups.
