@@ -10,9 +10,6 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
-  adapter: postgresql
-  encoding: utf8
-  pool: 5
   username: dfmrgwguhsipep
   password: 3701defe3c93ccda9c2e80c1ca2c3f7c0b5103da9f3c6a3f6d15597e6fc0baba
   host: ec2-50-16-196-238.compute-1.amazonaws.com
