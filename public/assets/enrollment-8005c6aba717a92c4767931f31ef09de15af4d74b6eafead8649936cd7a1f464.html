@@ -1,0 +1,103 @@
+<span navigate-view></span>
+<div class="container" style="margin-top: 8%;">
+	<h2 style="text-align: center;" class="" id="contactUsform"> Enrollment</h2>
+	<div class="alert alert-success alert-dismissable successMailer flash_message"  style="display: none;">
+    <strong>Thank you! we received your mail we will contact you soon</strong> 
+  </div>
+  <div class="alert alert-danger alert-dismissable errorMailer flash_message" style="display: none;">
+    <strong>somthing went wrong please try again</strong> 
+  </div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="">
+				<form name="enrollment" id ="enrollment">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" autofocus="autofocus" class="form-control" id="name" placeholder="Enter name"  name="name" validator="required"  valid-method="blur" ng-model = "enrollment.Name">
+							</div>
+							<div class="form-group">
+								<label for="registeremp_gender">Gender</label> <br>
+								<input type="radio" value="male" name="gender" id="registeremp_gender_male" ng-model ="enrollment.gender">
+								<label for="registeremp_gender_male">Male</label>
+								<input type="radio" value="female" name="gender" id="registeremp_gender_female" ng-model ="enrollment.gender">
+								<label for="registeremp_gender_female">Female</label>
+							</div>
+						<!-- 	<div class="form-group">
+								<label for="registeremp_dob">Date of birth</label>
+							<datepicker date-format="dd/MM/yyyy">
+							<input name="dob" ng-model="enrollment.dateOfBirth" type="text" class="form-control input-sm dateOfBirth" required>
+							</datepicker>
+						</div> -->
+						<!-- <div class="form-group">
+							<label for="registeremp_designation">Occupation</label>
+							<select ng-model="enrollment.selectedDesignation" class="form-control" name="designation" ng-options="x for x in designation" required >
+								 <option value="">Select designation</option> 
+							</select>
+							<span class ="validation-invalid" ng-show="enrollment.designation.$error.required">Select designation</span>
+						</div> -->
+						<div class="form-group">
+							<label for="registeremp_mobileNumber">Mobile number</label>
+							<input class="form-control input-sm mobileNumber error" placeholder="Enter Your Mobile Number" type="text" name="number" id="registeremp_mobileNumber" validator ="required,number,minlength=10,maxlength=10" valid-method ="blur" required-error-message="Please enter mobileNumber" id ="mobileNumber" ng-model ="enrollment.mobileNumber">
+						</div>
+						<div class="form-group">
+							<label for="registeremp_email">Email</label>
+							<input autofocus="autofocus" class="form-control input-sm" placeholder="Enter Email Id" type="text" value="" name="email" id="registeremp_email" validator ="required,email" ng-model ="enrollment.emailId" valid-method ="blur" required-error-message='Please enter your email id'>
+						</div>
+						<!-- <div class="form-group">
+							<label for="name">Father Name </label>
+							<input type="text" class="form-control" id="fathername" placeholder="Enter Father Name"  name="Fname" validator ="required" valid-method ="blur" ng-model = "enrollment.fatherName" >
+						</div> -->
+						<!-- <div class="form-group">
+							<label for="registeremp_mobileNumber">Father Mobile number</label>
+							<input  class="form-control input-sm mobileNumber error" placeholder="Enter  Father Mobile Number" type="text" name="fatherMobile" id="father_mobileNumber" validator ="required,number,minlength=10,maxlength=10" valid-method ="blur" required-error-message="Please enter mobileNumber"  ng-model ="enrollment.faherNumber">
+						</div> -->
+						<div class="col-md-6 col-md-push-5">
+							<button validation-submit="enrollment" ng-click ="submitEnrollment()" ng-disabled="!enrollment.$valid" class="btn btn-info pull-left" >Submit</button>
+							<button validation-reset="form" class="btn btn-default pull-left btnClr" id="resetForm" style="margin-left: 2%">Reset</button>
+						</div>
+					</div>
+				<!-- 	<div class="col-md-6">
+						<div class="form-group">
+							<label for="name">
+								Address </label>
+								<textarea name="message" id="message" class="form-control" rows="9" cols="25" 
+								placeholder="Address" name="message" validator ="required" valid-method ="blur" ng-model ="enrollment.studentAddress"></textarea>
+							</div>
+							<div class="form-group" ng-init ="enrollment.previousGaterank =''" >
+								<label for="name"> Previous GATE Rank (if any) : </label>
+								<input type="text"  class="form-control" id="previousGaterank" placeholder="Enter Previous GATE rank(optional)"  name="previousGate" ng-model ="enrollment.previousGaterank"/>
+							</div>
+							<div class="form-group" ng-init ="enrollment.previousIESrank =''">
+								<label for="name"> Previous IES Rank (if any) : </label>
+								<input type="text"  class="form-control" id="previousIESrank" placeholder="Enter previous IES rank(optional)"  name="previousIES" ng-model ="previousIESrank" />
+							</div>
+							<div class="form-group" ng-init ="enrollment.collegeAddress=''">
+								<label for="name">
+									College name and address </label>
+									<textarea name="message"  id="collegeAddress" class="form-control" rows="9" cols="25" 
+									placeholder="College address" name ="collegeAdd" ng-model ="enrollment.collegeAddress"></textarea>
+								</div>
+							</div>
+						</div> -->
+						
+					</form>
+				</div>
+				<div class="loader" style="display: none;"></div>
+			</div>
+		</div>
+	</div>
+
+	<span footer-view></span>
+		<style type="text/css">
+			.validation-invalid{
+				color: red;
+			}
+			p.validation-valid{
+				display: none;
+			}
+			p{
+				margin: 0 0 10px;
+			}
+		</style>

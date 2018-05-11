@@ -603,32 +603,7 @@ section[id] {
     margin-top:-28%;
   }
 }
-@media screen and (max-width: 600px){
-  a.navbar-brand{
-    font-size: 18px!important;
-  }
-  .navbar-brand small {
-    font-size: 11px!important;
-    margin-left: 51%!important;
-    color: #dc930c!important;
-    margin-top: 0!important; 
-  }
-  .container.ng-scope{
-    margin-top: 17% !important;
-  }
-  .dropdown-menu{
-    background-color: rgba(45, 155, 207, 0.91)
-  }
-  .Homelogo img{
-    max-width :40%!important;
-  }
-  #main-header{
-    height: 60px!important;
-  }
-  .Mslide {
-    margin-top:-8%;
-  }
-}
+
 .home-header {
   background: transparent;
   border: none;
@@ -1413,7 +1388,53 @@ div#portfoliolist {
 
 
 
+@media screen and (max-width: 600px){
+  a.navbar-brand{
+    font-size: 18px!important;
+  }
+  .navbar-brand small {
+    font-size: 11px!important;
+    margin-left: 51%!important;
+    color: #dc930c!important;
+    margin-top: 0!important; 
+  }
+  .container.ng-scope{
+    margin-top: 17% !important;
+  }
+  .dropdown-menu{
+    background-color: rgba(45, 155, 207, 0.91)
+  }
+  .Homelogo img{
+    max-width :40%!important;
+  }
+  #main-header{
+    height: 60px!important;
+    background: #fff;
+  }
+  .Mslide {
+    margin-top:-12%;
+    position: relative;
+    right: 10px;
+  }
+  .Mslide i{
+    background: transparent;
+    color: #138b8c;
+  }
+  a.navbar-brand{
+    padding: 15px!important;
+    font-size: 24px!important;
+  }
+  .banner-cnt  .link, .banner-cnt  .link:hover, .banner-cnt  .link:focus{
+    background: #ff9f1d;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .banner-cnt {
+    bottom: 15%;
+    top: inherit;
+  }
 
+}
 
 
 
