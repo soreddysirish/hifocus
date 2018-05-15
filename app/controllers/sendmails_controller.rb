@@ -16,6 +16,7 @@ class SendmailsController < ApplicationController
 		# 		:from => "+16158007884") 
 		# rescue Twilio::REST::RequestError => e
 		# 	puts e.message
+		#
 		# end
 		if res.errors.length == 0 && res.error_status == nil
 			render json: { status: :ok,status_code:200}
@@ -24,8 +25,10 @@ class SendmailsController < ApplicationController
 		end
 	end
 	def enrollment 
-		res =ContactMailer.enrolment_mail(params).deliver
-		if res.errors.length == 0 && res.error_status == nil
+		# res =ContactMailer.enrolment_mail(params).deliver
+		# if res.errors.length == 0 && res.error_status == nil
+		@user = User.create(name:params["name"])
+		if @user.save
 			render json: { status: :ok,status_code:200}
 		else
 			render json: { status: :fail}

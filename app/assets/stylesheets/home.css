@@ -29,6 +29,9 @@ li.dropdown:hover > .dropdown-menu {
   position: absolute;
   z-index: 50;
 }
+.alert-success{
+  margin-top:15% !important;
+}
 
 #main-header{
 
@@ -207,6 +210,7 @@ li.dropdown:hover > .dropdown-menu {
     -webkit-transform: translateY(0%);
   }
 }
+
 
 
 body {
